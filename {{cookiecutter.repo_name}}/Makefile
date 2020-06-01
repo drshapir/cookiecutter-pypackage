@@ -1,6 +1,7 @@
-.PHONY: help clean clean-pyc clean-build list test test-all coverage docs release sdist
+.PHONY: help clean clean-pyc clean-build lint test test-all coverage docs release sdist install
 
 help:
+	@echo "clean - remove all Python artifacts"
 	@echo "clean-build - remove build artifacts"
 	@echo "clean-pyc - remove Python file artifacts"
 	@echo "lint - check style with flake8"
@@ -10,6 +11,7 @@ help:
 	@echo "docs - generate Sphinx HTML documentation, including API docs"
 	@echo "release - package and upload a release"
 	@echo "sdist - package"
+	@echo "install - install the package to the active Python's site-packages"
 
 clean: clean-build clean-pyc
 
@@ -54,3 +56,6 @@ sdist: clean
 	python setup.py sdist
 	python setup.py bdist_wheel upload
 	ls -l dist
+
+install: clean
+	python setup.py install

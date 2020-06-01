@@ -1,0 +1,9 @@
+-r prod.txt
+
+bumpversion
+flake8
+tox
+coverage
+sphinx
+ipython
+pytest

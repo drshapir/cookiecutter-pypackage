@@ -34,21 +34,8 @@ setup(
     ],
     package_dir={'{{ cookiecutter.repo_name }}': '{{ cookiecutter.repo_name }}'},
     include_package_data=True,
-    install_requires=[
-    ],
+    install_requires=open('requirements/prod.txt').readlines(),
     license='MIT',
     zip_safe=False,
-    keywords='{{ cookiecutter.repo_name }}',
-    classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
-        'Natural Language :: English',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.6',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: Implementation :: PyPy',
-    ],
+    keywords='{{ cookiecutter.repo_name }}'
 )
